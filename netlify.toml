@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"           # Build command
+  publish = "dist"                    # Directory to publish (Vite's default output)
+
+[build.environment]
+  NODE_VERSION = "16"                 # Specify Node version if needed
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
