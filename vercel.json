@@ -2,17 +2,17 @@
   "version": 2,
   "builds": [
     {
-      "src": "package.json",
-      "use": "@vercel/node",
+      "src": "package.json",                // Point to root package.json
+      "use": "@vercel/static-build",         // Use static build for React app
       "config": {
-        "includeFiles": ["vite.config.js", "public/**/*"]
+        "distDir": "build"                   // Build output directory (Vite's default)
       }
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "/public/$1"
+      "src": "/(.*)",                        // Route all paths
+      "dest": "/build/$1"                    // Serve files from the build directory
     }
   ]
 }
