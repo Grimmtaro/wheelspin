@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.jsx",
   "scripts": {
-    "build": "vite build",    // Build the app using Vite
-    "dev": "vite",            // Development mode
-    "preview": "vite preview" // Preview the build output
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.0.0",
