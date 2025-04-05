@@ -2,17 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "package.json",                // Point to root package.json
-      "use": "@vercel/static-build",         // Use static build for React app
-      "config": {
-        "distDir": "build"                   // Build output directory (Vite's default)
-      }
+      "src": "frontend/package.json",      // Or the correct path if your frontend is in a folder
+      "use": "@vercel/react"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",                        // Route all paths
-      "dest": "/build/$1"                    // Serve files from the build directory
+      "src": "/(.*)",
+      "dest": "/index.html"  // For single-page apps
     }
   ]
 }
