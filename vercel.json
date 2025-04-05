@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "frontend/package.json",      // Or the correct path if your frontend is in a folder
+      "src": "frontend/package.json",
       "use": "@vercel/react"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/index.html"  // For single-page apps
+      "dest": "/index.html"
     }
   ]
 }
